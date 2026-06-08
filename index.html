@@ -3,518 +3,437 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta name="description" content="InquiTree evaluates AI agents in scientific inquiry loops using paper-derived research trees and controlled feedback.">
+  <meta name="keywords" content="InquiTree, ResearchGym, AI agents for science, scientific inquiry, research trees, LLM evaluation, benchmark">
+  <meta name="author" content="Shaoyang Cui">
+  <title>InquiTree | Evaluating AI Agents in Scientific Inquiry Loops</title>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
+  <header class="top-nav-wrap">
+    <nav class="top-nav container is-max-widescreen" aria-label="Main navigation">
+      <a class="top-nav-brand" href="#">InquiTree</a>
+      <div class="top-nav-links">
+        <a href="#abstract">Abstract</a>
+        <a href="#research-tree">Research Tree</a>
+        <a href="#environment">Environment</a>
+        <a href="#experiments">Experiments</a>
+        <a href="#dataset">IT-18</a>
+        <a href="#bibtex">BibTeX</a>
       </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section nav-offset">
+      <div class="container is-max-widescreen">
+        <div class="hero-panel">
+          <div class="hero-topline">
+            <span class="eyebrow-pill">Academic Project Page</span>
+            <span class="eyebrow-copy">ICML 2026 Proceedings | Benchmark for LLM-based agents for science</span>
           </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+          <div class="hero-center">
+            <div class="hero-title-stack">
+              <p class="hero-kicker">Paper-Derived Research Tree Evaluation</p>
+              <h1 class="title publication-title">
+                <span class="publication-name">InquiTree</span>
+                <span class="publication-subtitle">Evaluating AI Agents in the Scientific Inquiry Loop with Paper-Derived Research Trees</span>
+              </h1>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <p class="hero-summary">
+                InquiTree turns scientific papers into interactive <strong>Research Trees</strong>: logical DAGs over subtopic proposal,
+                study design, result interpretation, and belief updating. Agents must keep proposing the next scientific move,
+                absorb feedback, detect anomalous results, and decide when to draw conclusions.
+              </p>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <div class="publication-authors is-size-5">
+                <span class="author-block">Shaoyang Cui</span>
+              </div>
+              <div class="publication-affiliation">Department of Psychological and Cognitive Sciences, Tsinghua University</div>
+              <p class="publication-note">Preprint dated June 8, 2026. Project page: https://InquidTree.github.io</p>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdfs/researchgym-3.pdf" class="button cta-button cta-primary" target="_blank" rel="noopener noreferrer">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Read Paper (PDF)</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://github.com/InquidTree/InquidTree.github.io" class="button cta-button cta-secondary" target="_blank" rel="noopener noreferrer">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Project Repository</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#dataset" class="button cta-button cta-secondary">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>IT-18 Release</span>
+                  </a>
+                </span>
+              </div>
+
+              <div class="metric-grid">
+                <article class="metric-pill">
+                  <span>Evaluation Pool</span>
+                  <strong>30 Neuroscience Papers</strong>
+                </article>
+                <article class="metric-pill">
+                  <span>Public Subset</span>
+                  <strong>IT-18 Open Access</strong>
+                </article>
+                <article class="metric-pill">
+                  <span>Interaction Range</span>
+                  <strong>360-1320 Turns</strong>
+                </article>
+                <article class="metric-pill">
+                  <span>Diagnostic Focus</span>
+                  <strong>Critical Judgment</strong>
+                </article>
+              </div>
+
+              <figure class="hero-scene">
+                <img src="static/images/paper_figures/Figure1_in_paper.png" alt="InquiTree inquiry loop over paper-derived research trees" loading="eager">
+              </figure>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section class="section section-compact">
+      <div class="container is-max-widescreen">
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <span class="highlight-icon"><i class="fas fa-route"></i></span>
+            <h2>Inquiry-Loop Evaluation</h2>
+            <p>Agents are evaluated through repeated propose, observe, revise, and conclude cycles instead of isolated one-shot research tasks.</p>
+          </article>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+          <article class="highlight-card">
+            <span class="highlight-icon"><i class="fas fa-diagram-project"></i></span>
+            <h2>Paper-Derived DAGs</h2>
+            <p>Each task is grounded in a source paper and represented as a Research Tree with explicit logical dependencies across subtopics.</p>
+          </article>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+          <article class="highlight-card">
+            <span class="highlight-icon"><i class="fas fa-vial-circle-check"></i></span>
+            <h2>Diagnostic Stress Tests</h2>
+            <p>Fake Results and cutoff-aware splits expose cognitive tunneling, weak anomaly detection, and interpolation-extrapolation gaps.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
 
+    <section class="section" id="abstract">
+      <div class="container is-max-widescreen">
+        <div class="section-heading">
+          <p class="section-label">Abstract</p>
+          <h2 class="title is-3">Why InquiTree Matters</h2>
+        </div>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+        <div class="abstract-shell">
+          <div class="content has-text-justified">
+            <p>
+              LLM-based agents are increasingly used in scientific workflows, but static benchmarks can conflate genuine reasoning with rote memory.
+              InquiTree evaluates whether agents can participate in a dynamic scientific inquiry loop where they choose the next research step,
+              receive study feedback, and update beliefs over a long interaction.
+            </p>
 
+            <div class="motivation-box">
+              <p class="motivation-label">
+                <i class="fas fa-circle-nodes"></i>
+                <span>Core Idea</span>
+              </p>
+              <p>
+                Scientific discovery is formalized as an interactive Research Tree: a directed acyclic graph of dependencies among hypotheses,
+                study designs, results, and final conclusions.
+              </p>
+            </div>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <p>
+              Evaluating agents on a 30-paper test pool and releasing the open-access IT-18 subset, the paper identifies two limitations:
+              <strong>erosion of marginal capabilities</strong> under long-horizon interaction, and a performance drop on papers published after
+              model training cutoffs.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+    </section>
 
+    <section class="section section-soft" id="research-tree">
+      <div class="container is-max-widescreen">
+        <div class="section-heading">
+          <p class="section-label">Research Tree</p>
+          <h2 class="title is-3">From Scientific Papers to Logical Inquiry Graphs</h2>
+        </div>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+        <div class="columns is-variable is-7 is-vcentered">
+          <div class="column is-7-desktop">
+            <figure class="figure-card">
+              <img src="static/images/paper_figures/Figure2_in_paper.png" alt="InquiTree game logic and example interaction scenario" loading="lazy">
+              <figcaption>
+                <strong>Figure 2.</strong> The left side encodes subtopic-level dependencies as a research tree. The right side exposes that graph
+                as an interactive Topic, Subtopic, Study, and Result loop.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="column is-5-desktop">
+            <div class="analysis-card">
+              <p class="card-label">Graph Semantics</p>
+              <div class="component-list">
+                <article class="component-item">
+                  <span class="component-index">01</span>
+                  <div>
+                    <h3>Topic</h3>
+                    <p>The high-level scientific question. The agent must propose exactly one relevant subtopic to explore next.</p>
+                  </div>
+                </article>
+                <article class="component-item">
+                  <span class="component-index">02</span>
+                  <div>
+                    <h3>Subtopic</h3>
+                    <p>A logically meaningful research branch. Dependency constraints require prerequisite subtopics to be visited first.</p>
+                  </div>
+                </article>
+                <article class="component-item">
+                  <span class="component-index">03</span>
+                  <div>
+                    <h3>Study</h3>
+                    <p>The agent designs or selects an experimental study, then the environment executes or simulates its outcome.</p>
+                  </div>
+                </article>
+                <article class="component-item">
+                  <span class="component-index">04</span>
+                  <div>
+                    <h3>Result</h3>
+                    <p>The agent interprets feedback, chooses whether to explore another subtopic, redo a study, or draw a conclusion.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+    </section>
 
+    <section class="section" id="environment">
+      <div class="container is-max-widescreen">
+        <div class="section-heading">
+          <p class="section-label">Environment</p>
+          <h2 class="title is-3">A Rule-Based Game Engine for Scientific Inquiry</h2>
+        </div>
 
+        <div class="flow-diagram-shell">
+          <div class="flow-diagram">
+            <div class="flow-node">
+              <span class="flow-node-label">Step 01</span>
+              <strong>Select</strong>
+              <span>Free-text action is mapped to a valid subtopic or study through embedding similarity.</span>
+            </div>
+            <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="flow-node flow-node-accent">
+              <span class="flow-node-label">Step 02</span>
+              <strong>Observe</strong>
+              <span>The environment returns study feedback, including optional controlled Fake Results.</span>
+            </div>
+            <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="flow-node">
+              <span class="flow-node-label">Step 03</span>
+              <strong>Revise</strong>
+              <span>The agent continues exploration, repeats a study, or submits final conclusions.</span>
+            </div>
+          </div>
+          <p class="flow-note">Hints grow more specific when actions are invalid, allowing episodes to progress while preserving dependency constraints.</p>
+        </div>
 
+        <div class="taxonomy-grid">
+          <article class="taxonomy-card tone-crimson">
+            <span class="taxonomy-icon"><i class="fas fa-magnifying-glass-chart"></i></span>
+            <p class="taxonomy-label">Coverage</p>
+            <h3>Exploration Breadth</h3>
+            <p>Measures the fraction of unique subtopics visited by the agent within a research tree.</p>
+          </article>
 
+          <article class="taxonomy-card tone-blue">
+            <span class="taxonomy-icon"><i class="fas fa-scale-balanced"></i></span>
+            <p class="taxonomy-label">Conclusion Quality</p>
+            <h3>Evidence-Aware Scoring</h3>
+            <p>Ground-truth conclusion items are judged as recovered, partially recovered, or missed, then weighted by visited evidence.</p>
+          </article>
 
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+          <article class="taxonomy-card tone-olive">
+            <span class="taxonomy-icon"><i class="fas fa-triangle-exclamation"></i></span>
+            <p class="taxonomy-label">Robustness</p>
+            <h3>Fake Result Detection</h3>
+            <p>Controlled stochastic wrong results test whether agents preserve skepticism under long-horizon context load.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
-<!--End paper poster -->
+    </section>
 
+    <section class="section section-soft" id="experiments">
+      <div class="container is-max-widescreen">
+        <div class="section-heading">
+          <p class="section-label">Experiments</p>
+          <h2 class="title is-3">What Current Agents Reveal in the Loop</h2>
+        </div>
 
+        <div class="results-grid">
+          <div class="analysis-card">
+            <p class="card-label">Baseline Performance</p>
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Coverage</th>
+                  <th>Conclusion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>o3</td><td>0.337</td><td>0.279</td></tr>
+                <tr><td>deepseek-r1</td><td>0.268</td><td>0.201</td></tr>
+                <tr><td>gemini-2.5-pro</td><td>0.262</td><td>0.164</td></tr>
+                <tr><td>claude-4.5-sonnet</td><td>0.292</td><td>0.218</td></tr>
+                <tr><td>gpt-5-low</td><td>0.353</td><td>0.295</td></tr>
+                <tr><td>gpt-5-medium</td><td>0.335</td><td>0.290</td></tr>
+                <tr><td>gpt-5-high</td><td>0.324</td><td>0.272</td></tr>
+              </tbody>
+            </table>
+            <div class="results-summary">
+              <p>Even the strongest reported settings remain below 0.4 coverage, indicating that long dependent inquiry remains difficult.</p>
+            </div>
+          </div>
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
+          <figure class="figure-card">
+            <img src="static/images/paper_figures/Figure3_in_paper.png" alt="Results under different randomness levels" loading="lazy">
+            <figcaption>
+              <strong>Figure 3.</strong> As randomness increases, agents often redo studies more frequently, but Fake Result hit rate remains limited.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="columns is-variable is-7 is-vcentered experiment-gap">
+          <div class="column is-6-desktop">
+            <figure class="figure-card">
+              <img src="static/images/paper_figures/Figure4_in_paper.png" alt="Model performance before versus after knowledge cutoff dates" loading="lazy">
+              <figcaption>
+                <strong>Figure 4.</strong> Most evaluated models degrade on papers published after their reported knowledge cutoff dates.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="column is-6-desktop">
+            <div class="showcase-card">
+              <h3 class="showcase-title">Two Diagnostic Failure Modes</h3>
+              <p>
+                InquiTree separates fluent research narration from reliable scientific behavior. The paper reports that agents can develop
+                cognitive tunneling during long interactions, prioritizing coherent progress over skeptical verification.
+              </p>
+              <ul class="risk-list">
+                <li><strong>Erosion of critical judgment:</strong> anomaly detection drops when Fake Results are embedded in the full inquiry loop.</li>
+                <li><strong>Interpolation-extrapolation gap:</strong> post-cutoff papers expose weaker generalization to genuinely novel science.</li>
+                <li><strong>Practical implication:</strong> future AI scientists likely need explicit verification roles, structured checks, and human oversight.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+    </section>
 
+    <section class="section" id="dataset">
+      <div class="container is-max-widescreen">
+        <div class="section-heading">
+          <p class="section-label">Dataset</p>
+          <h2 class="title is-3">IT-18 Open-Access Benchmark Subset</h2>
+        </div>
+
+        <div class="demo-nav-grid">
+          <article class="demo-nav-card">
+            <p class="demo-nav-tag">Release Scope</p>
+            <h3>18 Open-Access Papers</h3>
+            <p>The public IT-18 subset contains paper-derived configurations and logs that can be distributed openly.</p>
+            <ul>
+              <li>120 listed subtopics across the released subset.</li>
+              <li>Average of roughly 6.7 subtopics per paper.</li>
+              <li>Source trees extracted with GPT-5-Pro and validated through human-in-the-loop review.</li>
+            </ul>
+          </article>
+
+          <article class="demo-nav-card">
+            <p class="demo-nav-tag">Full Evaluation</p>
+            <h3>30-Paper Test Pool</h3>
+            <p>All model results in the paper are computed on the full neuroscience paper pool.</p>
+            <ul>
+              <li>12 non-open-access papers are included only in aggregate results.</li>
+              <li>Paper-derived configs and logs for restricted papers are not released.</li>
+              <li>The pool is used for baseline, Fake Result, and cutoff-aware diagnostic analyses.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="interface-grid figure-grid-offset">
+          <article class="interface-card">
+            <img src="static/images/paper_figures/Figure_tree_extraction.png" alt="Pipeline for research tree extraction and validation" loading="lazy">
+            <h3>Tree Extraction</h3>
+            <p>Automated extraction is followed by fine-grained content verification, structural dependency checks, and manual review.</p>
+          </article>
+
+          <article class="interface-card">
+            <img src="static/images/paper_figures/Figure_state_transition.png" alt="State transition diagram for InquiTree" loading="lazy">
+            <h3>State Transitions</h3>
+            <p>The environment controls transitions across Topic, Subtopic, Study, Result, and Conclusion states.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="bibtex">
+      <div class="container is-max-widescreen">
+        <div class="section-heading">
+          <p class="section-label">Citation</p>
+          <h2 class="title is-3">BibTeX</h2>
+        </div>
+
+        <div class="bibtex-shell">
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX">
+            <span class="copy-text">Copy</span>
+          </button>
+          <pre id="bibtex-code">@inproceedings{cui2026inquitree,
+  title     = {InquiTree: Evaluating AI Agents in the Scientific Inquiry Loop with Paper-Derived Research Trees},
+  author    = {Cui, Shaoyang},
+  booktitle = {Proceedings of the International Conference on Machine Learning},
+  year      = {2026},
+  note      = {Preprint, June 8, 2026}
+}</pre>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container is-max-widescreen">
+      <div class="footer-layout">
+        <div>
+          <p class="footer-mark">InquiTree</p>
+          <p class="footer-note">Project homepage for evaluating scientific inquiry loops with paper-derived research trees.</p>
+        </div>
+        <div class="footer-meta">
+          <p>Visual style adapted from the existing project-page family and content grounded in the provided PDF.</p>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  <script src="static/js/index.js"></script>
+</body>
+</html>
