@@ -1468,52 +1468,6 @@ a:focus-visible {
   line-height: 1.65;
 }
 
-.bibtex-shell {
-  position: relative;
-  padding: 2.2rem 1rem 1rem;
-  border-radius: 18px;
-  border: 1px solid rgba(20, 32, 51, 0.12);
-  background: rgba(16, 24, 37, 0.92);
-  box-shadow: var(--shadow-card);
-}
-
-.bibtex-shell pre {
-  margin: 0;
-  padding: 0.25rem 0.35rem 0.1rem;
-  border-radius: 10px;
-  background: transparent !important;
-  color: #f4f6fa !important;
-  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.copy-bibtex-btn {
-  position: absolute;
-  top: 0.85rem;
-  right: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #f8fafc;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.copy-bibtex-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-}
-
-.copy-bibtex-btn.copied {
-  border-color: rgba(120, 215, 160, 0.7);
-  color: #8af0bc;
-}
-
 /* Discussion subpages */
 .subpage-main {
   padding-top: 74px;
